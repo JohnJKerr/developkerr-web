@@ -1,9 +1,9 @@
 module.exports = {
-  pathPrefix: `/gatsby-creative`,
+  pathPrefix: `/developkerr-web`,
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `DevelopKerr`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `@JohnJKerr`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,11 +19,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `developkerr-web`,
+        short_name: `developkerr`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#5B0B94`,
+        theme_color: `#5B0B94`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
