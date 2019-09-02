@@ -40,13 +40,11 @@ export default class IndexPage extends React.Component {
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-8 text-center">
-                <h2 className="text-white mt-0">We've got what you need!</h2>
+                <h2 className="text-white mt-0">Define, refine and deliver</h2>
                 <hr className="divider light my-4"/>
-                <p className="text-white-50 mb-4">Start Bootstrap has everything you need to get your new website up
-                  and
-                  running in no time! Choose one of our open source, free to download, and easy to use themes! No
-                  strings
-                  attached!</p>
+                <p className="text-white-50 mb-4">We offer a flexible service, either taking your project from beginning
+                  to end or helping out at any point in between.
+                  We pride ourselves on being friendly, approachable and providing maximum value to our customers.</p>
                 <a className="btn btn-light btn-xl js-scroll-trigger" href="#services"
                    onClick={Scroller.handleAnchorScroll}>Get Started!</a>
               </div>
@@ -63,28 +61,28 @@ export default class IndexPage extends React.Component {
                 <div className="mt-5">
                   <i className="fas fa-4x fa-laptop-code text-primary mb-4"></i>
                   <h3 className="h4 mb-2">Development</h3>
-                  <p className="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
+                  <p className="text-muted mb-0">No matter the task or the technology, we can help.</p>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 text-center">
                 <div className="mt-5">
                   <i className="fas fa-4x fa-clipboard-check text-primary mb-4"></i>
                   <h3 className="h4 mb-2">Quality Assurance</h3>
-                  <p className="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
+                  <p className="text-muted mb-0">Your projects, tested to the highest standard.</p>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 text-center">
                 <div className="mt-5">
                   <i className="fas fa-4x fa-network-wired text-primary mb-4"></i>
                   <h3 className="h4 mb-2">Infrastructure</h3>
-                  <p className="text-muted mb-0">You can use this design as is, or you can make changes!</p>
+                  <p className="text-muted mb-0">We'll ensure your project scales with your business.</p>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 text-center">
                 <div className="mt-5">
                   <i className="fas fa-4x fa-chess-knight text-primary mb-4"></i>
                   <h3 className="h4 mb-2">Strategy</h3>
-                  <p className="text-muted mb-0">Is it really open source if it's not made with love?</p>
+                  <p className="text-muted mb-0">Board level SaaS and tech experience at your disposal.</p>
                 </div>
               </div>
             </div>
@@ -99,10 +97,10 @@ export default class IndexPage extends React.Component {
                   <Img fluid={this.props.data.images.edges[0].node.childImageSharp.fluid}/>
                   <div className="portfolio-box-caption">
                     <div className="project-category text-white-50">
-                      Category
+                      Website and App Development
                     </div>
                     <div className="project-name">
-                      Project Name
+                      Konquest
                     </div>
                   </div>
                 </a>
@@ -112,10 +110,10 @@ export default class IndexPage extends React.Component {
                   <Img fluid={this.props.data.images.edges[1].node.childImageSharp.fluid}/>
                   <div className="portfolio-box-caption">
                     <div className="project-category text-white-50">
-                      Category
+                      Development and QA
                     </div>
                     <div className="project-name">
-                      Project Name
+                      Imagine Build
                     </div>
                   </div>
                 </a>
@@ -125,10 +123,10 @@ export default class IndexPage extends React.Component {
                   <Img fluid={this.props.data.images.edges[2].node.childImageSharp.fluid}/>
                   <div className="portfolio-box-caption">
                     <div className="project-category text-white-50">
-                      Category
+                      Fractional CTO
                     </div>
                     <div className="project-name">
-                      Project Name
+                      Tungl
                     </div>
                   </div>
                 </a>
