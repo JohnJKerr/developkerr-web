@@ -1,12 +1,19 @@
+@import "../../sass/variables.scss";
+
+.modal {
+	padding-left: 17px;
+	padding-right: 17px;
+}
+
 .modal-dialog {
 	position: static;
 	transition: none !important;
 }
 
 .modal-content {
-	background: transparent;
-	border: none;
 	position: static;
+	background-color: $pink;
+	color: white;
 
 	.modal-header {
 		border: none;
@@ -22,7 +29,19 @@
 	}
 
 	.modal-body {
-		padding-top: 0;
 		position: static;
+		min-height: 440px;
+
+		h2 {
+			font-size: 32px;
+			text-align: center;
+		}
+
+		h3 {
+			font-size: 24px;
+			padding-bottom: 4px;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+			margin-bottom: 12px;
+		}
 	}
 }

@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import { Carousel } from 'react-bootstrap'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -166,7 +167,58 @@ export default class IndexPage extends React.Component {
           </div>
         </section>
         <PortfolioModal show={this.state.modalShow} onHide={() => this.setModal(false, 0)}>
-          <PortfolioCarousel images={this.props.data.images.edges} current={this.state.modalCurrent}/>
+          <Carousel interval={null} indicators={false} defaultActiveIndex={this.state.modalCurrent} slide={false}>
+            <Carousel.Item>
+              <h2>Konquest</h2>
+              <h3>Services</h3>
+              <ul>
+                <li>Tech Leadership</li>
+                <li>Web Application Development</li>
+                <li>Web Development</li>
+              </ul>
+              <h3>Description</h3>
+              <p>
+                We were engaged by this exciting start-up to provide technical and SaaS leadership, in addition to development services,
+                during the launch of its flagship product. We quickly researched and understood the domain of commission,
+                offering immediate advice on road map, strategy and delivery. We also contributed directly to the
+                development workload, implementing key features and integrations. Finally, we built the corporate website
+                from a bespoke design using modern JAMstack technologies.
+              </p>
+            </Carousel.Item>
+            <Carousel.Item>
+              <h2>Imagine Build</h2>
+              <h3>Services</h3>
+              <ul>
+                <li>Flash Conversion</li>
+                <li>Interactive Web Development</li>
+                <li>Quality Assurance</li>
+              </ul>
+              <h3>Description</h3>
+              <p>
+                We assisted this software consultancy in a large project to convert a series of highly interactive and
+                bespoke flash activities to current web technologies. The activities covered a variety of topics, including
+                mathematics, where legacy ActionScript needed to be rewritten into JavaScript. We also offered comprehensive
+                QA services on the project, testing across a range of modern and legacy browsers/devices.
+              </p>
+            </Carousel.Item>
+            <Carousel.Item>
+              <h2>Tungl</h2>
+              <h3>Services</h3>
+              <ul>
+                <li>Tech Leadership</li>
+                <li>DevOps and Infrastructure</li>
+                <li>Web Application Development</li>
+              </ul>
+              <h3>Description</h3>
+              <p>
+                Having previously been employed by this tech assessment organisation, our services were retained in order
+                to keep the experience and domain knowledge upon which the business depends. The services provided align
+                with those of a start-up CTO, providing tech leadership and strategy around key concerns such as compliance,
+                security and scalability. Additionally we continued to own the majority of infrastructure and DevOps
+                processes as well as developing on the company's legacy and current applications.
+              </p>
+            </Carousel.Item>
+          </Carousel>
         </PortfolioModal>
       </Layout>
     )
