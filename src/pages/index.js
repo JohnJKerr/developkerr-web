@@ -4,10 +4,9 @@ import Img from "gatsby-image"
 import { Carousel } from 'react-bootstrap'
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Scroller from "../components/scroller"
 import PortfolioModal from "../components/portfolio/modal"
-import PortfolioCarousel from "../components/portfolio/carousel"
 
 export default class IndexPage extends React.Component {
   constructor(props) {
@@ -36,14 +35,14 @@ export default class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO title="Home"/>
+        <Seo title="Home"/>
         <section className="page-section bg-primary" id="about">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-8 text-center">
                 <h2 className="text-white mt-0">Define, refine and deliver</h2>
                 <hr className="divider light my-4"/>
-                <p className="text-white-50 mb-4">We offer a flexible service, either taking your project from beginning
+                <p className="text-white-50 mb-4">We offer a flexible service, taking your project from beginning
                   to end or helping out at any point in between.
                   We pride ourselves on being friendly, approachable and providing maximum value to our customers.</p>
                 <a className="btn btn-light btn-xl js-scroll-trigger" href="#services"
@@ -92,9 +91,9 @@ export default class IndexPage extends React.Component {
 
         <section id="portfolio">
           <div className="container-fluid p-0">
-            <div className="row gx-0">
+            <div className="row gx-0 d-flex justify-content-center align-items-center">
               <div className="col-lg-4 col-sm-6">
-                <a className="portfolio-box" href="img/portfolio/fullsize/1.jpg" onClick={this.handlePortfolioClick.bind(this, 0)}>
+                <a className="portfolio-box" href="img/portfolio/fullsize/1.png" onClick={this.handlePortfolioClick.bind(this, 0)}>
                   <Img fluid={this.props.data.images.edges[0].node.childImageSharp.fluid}/>
                   <div className="portfolio-box-caption">
                     <div className="project-category text-white-50">
@@ -107,7 +106,7 @@ export default class IndexPage extends React.Component {
                 </a>
               </div>
               <div className="col-lg-4 col-sm-6">
-                <a className="portfolio-box" href="img/portfolio/fullsize/2.jpg" onClick={this.handlePortfolioClick.bind(this, 1)}>
+                <a className="portfolio-box" href="img/portfolio/fullsize/2.png" onClick={this.handlePortfolioClick.bind(this, 1)}>
                   <Img fluid={this.props.data.images.edges[1].node.childImageSharp.fluid}/>
                   <div className="portfolio-box-caption">
                     <div className="project-category text-white-50">
@@ -120,7 +119,7 @@ export default class IndexPage extends React.Component {
                 </a>
               </div>
               <div className="col-lg-4 col-sm-6">
-                <a className="portfolio-box" href="img/portfolio/fullsize/3.jpg" onClick={this.handlePortfolioClick.bind(this, 2)}>
+                <a className="portfolio-box" href="img/portfolio/fullsize/3.png" onClick={this.handlePortfolioClick.bind(this, 2)}>
                   <Img fluid={this.props.data.images.edges[2].node.childImageSharp.fluid}/>
                   <div className="portfolio-box-caption">
                     <div className="project-category text-white-50">
@@ -136,12 +135,12 @@ export default class IndexPage extends React.Component {
           </div>
         </section>
 
-        <section className="page-section bg-dark text-white">
-          <div className="container text-center">
-            <h2 className="mb-4">Read the latest from our team</h2>
-            <a className="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Download Now!</a>
-          </div>
-        </section>
+        {/*<section className="page-section bg-dark text-white">*/}
+        {/*  <div className="container text-center">*/}
+        {/*    <h2 className="mb-4">Read the latest from our team</h2>*/}
+        {/*    <a className="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Download Now!</a>*/}
+        {/*  </div>*/}
+        {/*</section>*/}
 
         <section className="page-section" id="contact">
           <div className="container">
@@ -149,19 +148,21 @@ export default class IndexPage extends React.Component {
               <div className="col-lg-8 text-center">
                 <h2 className="mt-0">Get in touch!</h2>
                 <hr className="divider my-4"/>
-                <p className="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an
-                  email
-                  and we will get back to you as soon as possible!</p>
+                <p className="text-muted mb-5">Ready to start your next project with us? Send us a
+                  message and we will get back to you as soon as possible!</p>
               </div>
             </div>
-            <div className="row">
+            <div className="row d-flex justify-content-center">
               <div className="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-                <i className="fas fa-phone fa-3x mb-3 text-muted"></i>
-                <div>+44 (0) xxxxx xxx xxx</div>
+                <a className="d-block" href="https://www.linkedin.com/in/johnjameskerr/">
+                  <i className="fas fa-brands fa-linkedin fa-3x mb-3 text-muted"></i>
+                </a>
               </div>
               <div className="col-lg-4 mr-auto text-center">
-                <i className="fas fa-envelope fa-3x mb-3 text-muted"></i>
-                <a className="d-block" href="mailto:contact@yourwebsite.com">hello@developkerr.com</a>
+                <a className="d-block" href="mailto:hello@developkerr.com">
+                  <i className="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                  <span className="fs-0">hello@developkerr.com</span>
+                </a>
               </div>
             </div>
           </div>
@@ -228,7 +229,7 @@ export default class IndexPage extends React.Component {
 
 export const imageData = graphql`
   query {
-    images: allFile(filter: {relativePath: {glob: "portfolio/fullsize/*.jpg"}}, sort: {fields: name}) {
+    images: allFile(filter: {relativePath: {glob: "portfolio/fullsize/*.png"}}, sort: {fields: name}) {
       edges {
         node {
           childImageSharp {
